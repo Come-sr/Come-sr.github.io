@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>munyun.me</title>
     <style>
@@ -23,31 +27,25 @@
             text-align: center;
         }
 
-        .main-text {
-            font-size: 12vw;
+        .small-munyun {
+            font-size: 4vw;
             font-weight: 900;
             color: #000;
-            letter-spacing: -0.08em;
-            line-height: 0.7;
+            letter-spacing: -0.05em;
             text-transform: uppercase;
-            position: relative;
-            z-index: 2;
+            margin-bottom: -1vw;
         }
 
-        .outline-text {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .large-munyun {
             font-size: 12vw;
             font-weight: 900;
             color: transparent;
-            -webkit-text-stroke: 3px #000;
-            text-stroke: 3px #000;
+            -webkit-text-stroke: 2px #000;
+            text-stroke: 2px #000;
             letter-spacing: -0.08em;
-            line-height: 0.7;
+            line-height: 0.8;
             text-transform: uppercase;
-            z-index: 1;
-            transform: translate(2px, 2px);
+            position: relative;
         }
 
         .contact-info {
@@ -74,9 +72,13 @@
         }
 
         @media (max-width: 768px) {
-            .main-text, .outline-text {
-                font-size: 15vw;
-                line-height: 0.65;
+            .small-munyun {
+                font-size: 6vw;
+                margin-bottom: -1.5vw;
+            }
+            
+            .large-munyun {
+                font-size: 18vw;
             }
             
             .contact-info {
@@ -87,14 +89,23 @@
         }
 
         @media (max-width: 480px) {
-            .main-text, .outline-text {
-                font-size: 18vw;
-                line-height: 0.6;
+            .small-munyun {
+                font-size: 8vw;
+                margin-bottom: -2vw;
+            }
+            
+            .large-munyun {
+                font-size: 22vw;
             }
         }
 
         @media (min-width: 1200px) {
-            .main-text, .outline-text {
+            .small-munyun {
+                font-size: 3vw;
+                margin-bottom: -0.5vw;
+            }
+            
+            .large-munyun {
                 font-size: 10vw;
             }
         }
@@ -102,8 +113,8 @@
 </head>
 <body>
     <div class="text-container">
-        <div class="main-text">MUNYUN</div>
-        <div class="outline-text">MUNYUN</div>
+        <div class="small-munyun">MUNYUN</div>
+        <div class="large-munyun">MUNYUN</div>
     </div>
     
     <div class="contact-info">
