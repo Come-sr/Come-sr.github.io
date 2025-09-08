@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>munyun.me - Coming Soon</title>
+    <title>munyun.me</title>
     <style>
         * {
             margin: 0;
@@ -12,229 +12,93 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(45deg, #1a1a1a, #2d2d2d, #1a1a1a);
-            background-size: 400% 400%;
-            animation: gradientShift 8s ease infinite;
-            color: white;
-            overflow-x: hidden;
+            font-family: 'Arial Black', Arial, sans-serif;
+            background: white;
+            color: #000;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .container {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            padding: 2rem;
-        }
-
-        .album-cover {
-            width: 300px;
-            height: 300px;
-            margin: 0 auto 2rem;
-            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.6),
-                0 0 60px rgba(255, 255, 255, 0.1);
-            transform: rotate(-5deg);
-            transition: all 0.3s ease;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><rect width="300" height="300" fill="%23000"/><text x="150" y="140" text-anchor="middle" fill="white" font-family="Arial" font-size="20" font-weight="bold">DIE LIT</text><text x="150" y="170" text-anchor="middle" fill="%23ff0040" font-family="Arial" font-size="16">PLAYBOI CARTI</text></svg>') center/cover;
         }
 
-        .album-cover:hover {
-            transform: rotate(0deg) scale(1.05);
-            box-shadow: 
-                0 30px 60px rgba(0, 0, 0, 0.8),
-                0 0 80px rgba(255, 0, 64, 0.3);
-        }
-
-        h1 {
-            font-size: 3.5rem;
+        .main-text {
+            font-size: 15vw;
             font-weight: 900;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #ff0040, #ffffff, #ff0040);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: textGlow 3s ease-in-out infinite alternate;
-            text-shadow: 0 0 30px rgba(255, 0, 64, 0.5);
-        }
-
-        @keyframes textGlow {
-            from { background-position: 0% 50%; }
-            to { background-position: 100% 50%; }
-        }
-
-        .subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            color: #cccccc;
-            font-weight: 300;
-            letter-spacing: 2px;
+            color: #000;
+            letter-spacing: -0.05em;
+            line-height: 0.85;
+            text-align: center;
             text-transform: uppercase;
+            position: relative;
         }
 
-        .coming-soon {
-            font-size: 1.1rem;
-            color: #999;
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .social-link {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 0, 64, 0.3);
-            border-radius: 25px;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .social-link:hover {
-            background: rgba(255, 0, 64, 0.2);
-            border-color: #ff0040;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 0, 64, 0.3);
-        }
-
-        .particles {
-            position: fixed;
+        .shadow-text {
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            pointer-events: none;
-            z-index: 1;
+            color: transparent;
+            -webkit-text-stroke: 2px #000;
+            text-stroke: 2px #000;
+            z-index: -1;
+            transform: translate(3px, 3px);
+            opacity: 0.3;
         }
 
-        .particle {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: rgba(255, 0, 64, 0.6);
-            animation: float 6s infinite linear;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-10vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        .pulse {
-            position: absolute;
-            top: 50%;
+        .contact-info {
+            position: fixed;
+            bottom: 2rem;
             left: 50%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(255, 0, 64, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            animation: pulse 4s ease-in-out infinite;
-            z-index: 1;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+            color: #666;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 400;
+            text-align: center;
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.3; }
-            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.1; }
+        .contact-link {
+            color: #000;
+            text-decoration: none;
+            border-bottom: 1px solid #000;
+            margin-left: 0.5rem;
+        }
+
+        .contact-link:hover {
+            opacity: 0.7;
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .album-cover { width: 250px; height: 250px; }
-            .container { padding: 1rem; }
-            .social-links { flex-direction: column; align-items: center; }
+            .main-text {
+                font-size: 18vw;
+                line-height: 0.8;
+            }
+            
+            .contact-info {
+                bottom: 1rem;
+                font-size: 0.8rem;
+                padding: 0 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-text {
+                font-size: 20vw;
+                line-height: 0.75;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="particles" id="particles"></div>
-    <div class="pulse"></div>
-    
-    <div class="container">
-        <div class="album-cover"></div>
-        <h1>munyun.me</h1>
-        <p class="subtitle">Site en construction</p>
-        <p class="coming-soon">
-            Cette page est temporaire.<br>
-            Le site complet arrive bientôt !<br>
-            <em>Stay tuned...</em>
-        </p>
-        
-        <div class="social-links">
-            <a href="mailto:contact@munyun.me" class="social-link">Contact</a>
-            <a href="#" class="social-link" onclick="alert('Bientôt disponible !')">À propos</a>
-        </div>
+    <div class="main-text">
+        MUNYUN
+        <div class="shadow-text">MUNYUN</div>
     </div>
-
-    <script>
-        // Création des particules animées
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 50;
-
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 6 + 's';
-                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
-                particlesContainer.appendChild(particle);
-            }
-        }
-
-        // Animation du titre au clic
-        document.querySelector('h1').addEventListener('click', function() {
-            this.style.transform = 'scale(1.1)';
-            setTimeout(() => {
-                this.style.transform = 'scale(1)';
-            }, 200);
-        });
-
-        // Initialisation
-        createParticles();
-        
-        // Effet de parallaxe subtil
-        document.addEventListener('mousemove', (e) => {
-            const cover = document.querySelector('.album-cover');
-            const x = (e.clientX / window.innerWidth) * 10 - 5;
-            const y = (e.clientY / window.innerHeight) * 10 - 5;
-            cover.style.transform = `rotate(-5deg) translate(${x}px, ${y}px)`;
-        });
-    </script>
+    
+    <div class="contact-info">
+        Site en construction —<a href="mailto:contact@munyun.me" class="contact-link">Contact</a>
+    </div>
 </body>
 </html>
