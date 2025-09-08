@@ -12,6 +12,9 @@
       font-weight: normal;
       font-style: normal;
     }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
     html, body {
       margin: 0;
       padding: 0;
@@ -31,13 +34,19 @@
     }
     .title {
       font-family: 'Condiment', cursive;
-      color: #d08a56;
+      font-style: normal;
+      font-weight: normal;
       font-size: 6rem;
+      color: #d08a56;
+      line-height: 1;
       margin: 0;
       opacity: 0;
       transform: translateY(20px);
       animation: fadeInUp 0.8s ease-out forwards;
       animation-delay: 0.4s;
+      /* Match exact letterforms and smoothing */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     .loader {
       position: absolute;
